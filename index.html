@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Unlocked - Couples Intimacy App | Guided Card Game for Partners</title>
+    <meta name="description" content="Unlocked is the ultimate couples intimacy app. Guided card-based experiences to help partners connect deeper, spice up your relationship, and rediscover each other.">
+    <meta name="keywords" content="couples intimacy app, couples game app, relationship app, intimacy card game, romantic app for couples, date night app, couples connection app, spice up relationship">
+    <meta name="author" content="Unlocked App">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Unlocked - Couples Intimacy App">
+    <meta property="og:description" content="Guided card-based experiences to help couples connect deeper and rediscover intimacy.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Unlocked - Couples Intimacy App">
+    <meta name="twitter:description" content="Guided card-based experiences to help couples connect deeper and rediscover intimacy.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e94560;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 5% 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #a0a0a0;
+            margin-bottom: 30px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #cccccc;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            color: #ffffff;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #e94560;
+            color: #e94560;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        }
+        
+        .age-badge {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 5%;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: #ffffff;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #e94560;
+        }
+        
+        .feature-card p {
+            color: #a0a0a0;
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 100px 5%;
+        }
+        
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            text-align: center;
+            max-width: 250px;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .step p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+        
+        /* Decks Section */
+        .decks {
+            padding: 100px 5%;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .decks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .deck-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .deck-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .deck-card .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .deck-card h3 {
+            color: #e94560;
+            margin-bottom: 8px;
+        }
+        
+        .deck-card p {
+            color: #a0a0a0;
+            font-size: 0.85rem;
+        }
+        
+        .deck-card.premium::after {
+            content: "Premium";
+            display: block;
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: #ffd700;
+        }
+        
+        /* Testimonials placeholder */
+        .social-proof {
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .social-proof p {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            font-style: italic;
+        }
+        
+        /* Download Section */
+        .download {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(255, 107, 138, 0.05));
+        }
+        
+        .download h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .download p {
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .store-btn {
+            background: #ffffff;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .store-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .store-btn.coming-soon {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 5% 30px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-section h4 {
+            color: #e94560;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section a {
+            display: block;
+            color: #a0a0a0;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #e94560;
+        }
+        
+        .footer-section p {
+            color: #a0a0a0;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .steps {
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo">Unlocked</a>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#decks">Decks</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unlocked</h1>
+            <p class="tagline">Intimacy, redefined.</p>
+            <p>Guided card-based experiences designed to help couples connect deeper, spark romance, and rediscover each other. Play together, grow together.</p>
+            <div class="cta-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.shadi.unlocked" class="btn btn-primary">
+                    📱 Download for Android
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    Learn More
+                </a>
+            </div>
+            <span class="age-badge">🔞 18+ Only | For Couples</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">Why Couples Love Unlocked</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💑</div>
+                <h3>Play Together</h3>
+                <p>Share one device and take turns drawing cards. Progress through the experience together, building anticipation with each reveal.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎴</div>
+                <h3>Guided Experiences</h3>
+                <p>Each deck contains carefully crafted cards that guide you through intimate moments, from sweet and romantic to passionate and adventurous.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌈</div>
+                <h3>For All Couples</h3>
+                <p>Inclusive content for straight, lesbian, gay, and bisexual couples. Every relationship deserves intimacy tailored to them.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Customizable</h3>
+                <p>Choose your location, add enhancements, and select the perfect deck for your mood. Every session is unique.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎲</div>
+                <h3>Never Repeat</h3>
+                <p>With thousands of unique card combinations, every session feels fresh and exciting. No two nights are ever the same.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Private & Secure</h3>
+                <p>Your intimate moments stay between you and your partner. No accounts required, no personal data stored.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Download & Open</h3>
+                <p>Download the app and set your preferences. Select your relationship type and you're ready to play.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Choose Your Deck</h3>
+                <p>Select a deck that matches your mood - from sweet romance to passionate adventure.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Play Together</h3>
+                <p>Follow the cards, enjoy the experience, and reconnect with your partner.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decks Section -->
+    <section class="decks" id="decks">
+        <h2 class="section-title">Explore Our Decks</h2>
+        <div class="decks-grid">
+            <div class="deck-card">
+                <div class="emoji">💕</div>
+                <h3>Sweet</h3>
+                <p>Romantic & loving moments for tender connection</p>
+            </div>
+            <div class="deck-card">
+                <div class="emoji">😏</div>
+                <h3>Flirty</h3>
+                <p>Playful & teasing experiences to spark desire</p>
+            </div>
+            <div class="deck-card premium">
+                <div class="emoji">🔥</div>
+                <h3>Hot</h3>
+                <p>Turn up the heat with sensual adventures</p>
+            </div>
+            <div class="deck-card premium">
+                <div class="emoji">😈</div>
+                <h3>Naughty</h3>
+                <p>Explore your deepest desires together</p>
+            </div>
+            <div class="deck-card premium">
+                <div class="emoji">🧘</div>
+                <h3>Kamasutra</h3>
+                <p>Ancient wisdom meets modern intimacy</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <p>"The app that brings couples closer, one card at a time."</p>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <h2>Ready to Connect?</h2>
+        <p>Download Unlocked now and start your journey to deeper intimacy.</p>
+        <div class="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.shadi.unlocked" class="store-btn">
+                ▶️ Google Play
+            </a>
+            <span class="store-btn coming-soon">
+                🍎 App Store (Coming Soon)
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Unlocked</h4>
+                <p>Intimacy, redefined. Helping couples connect deeper through guided experiences.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="contact.html">Contact Us</a>
+                <a href="support.html">FAQ & Support</a>
+            </div>
+            <div class="footer-section">
+                <h4>Download</h4>
+                <a href="https://play.google.com/store/apps/details?id=com.shadi.unlocked">Google Play</a>
+                <span style="color: #666;">App Store (Coming Soon)</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Unlocked. All rights reserved. | Adults 18+ Only</p>
+        </div>
+    </footer>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Unlocked",
+        "operatingSystem": "Android",
+        "applicationCategory": "LifestyleApplication",
+        "description": "Couples intimacy app with guided card-based experiences to help partners connect deeper.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "contentRating": "Mature 17+",
+        "author": {
+            "@type": "Organization",
+            "name": "Unlocked App"
+        }
+    }
+    </script>
+
+</body>
+</html>

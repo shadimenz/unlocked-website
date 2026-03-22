@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Support & FAQ - Unlocked App | Help Center</title>
+    <meta name="description" content="Get help with Unlocked app. Find answers to frequently asked questions about connecting with your partner, subscriptions, privacy, and more.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e94560;
+        }
+        
+        .support-page {
+            padding: 120px 5% 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-header p {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+        
+        .faq-category {
+            margin-bottom: 50px;
+        }
+        
+        .faq-category h2 {
+            color: #e94560;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: #e94560;
+        }
+        
+        .faq-item.active .faq-question::after {
+            content: "−";
+        }
+        
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+            color: #a0a0a0;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 0 25px 20px;
+            max-height: 500px;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(255, 107, 138, 0.05));
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .contact-box h2 {
+            margin-bottom: 15px;
+        }
+        
+        .contact-box p {
+            color: #a0a0a0;
+            margin-bottom: 25px;
+        }
+        
+        .contact-box a {
+            display: inline-block;
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+        
+        .contact-box a:hover {
+            transform: translateY(-3px);
+        }
+        
+        footer {
+            padding: 30px 5%;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">Unlocked</a>
+        <ul class="nav-links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#download">Download</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="support-page">
+        <div class="page-header">
+            <h1>Support & FAQ</h1>
+            <p>Find answers to common questions about Unlocked</p>
+        </div>
+        
+        <!-- Getting Started -->
+        <div class="faq-category">
+            <h2>🚀 Getting Started</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I connect with my partner?</div>
+                <div class="faq-answer">
+                    <p>It's easy! One partner opens the app and taps "Create Room" to get a 6-digit code. Share this code with your partner. They tap "Join Room" and enter the code. Once connected, you'll both see the same cards in sync!</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do we both need to download the app?</div>
+                <div class="faq-answer">
+                    <p>Yes, both partners need to have Unlocked installed on their devices to play together. The app syncs cards between both phones in real-time.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if my partner is far away?</div>
+                <div class="faq-answer">
+                    <p>Unlocked works great for long-distance couples! Enable "Long Distance Mode" when selecting your preferences, and you'll get cards specially designed for partners who are apart.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decks & Content -->
+        <div class="faq-category">
+            <h2>🎴 Decks & Content</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What decks are available?</div>
+                <div class="faq-answer">
+                    <p>We offer 5 decks: Sweet (romantic & loving), Flirty (playful & teasing), Hot (sensual adventures), Naughty (passionate exploration), and Kamasutra (ancient wisdom). Sweet and Flirty are free; others require Premium.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is the content inclusive for LGBTQ+ couples?</div>
+                <div class="faq-answer">
+                    <p>Absolutely! When you set up your session, you can select your relationship type (straight, lesbian, gay, or bisexual). All cards are tailored to match your preferences.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What are locations and enhancements?</div>
+                <div class="faq-answer">
+                    <p>Locations let you customize where you're playing (bedroom, kitchen, hotel, etc.). Enhancements add extras like blindfolds, ice, or music to your experience. These make each session unique!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Premium & Subscriptions -->
+        <div class="faq-category">
+            <h2>💎 Premium & Subscriptions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What's included in Premium?</div>
+                <div class="faq-answer">
+                    <p>Premium unlocks: Hot deck, Naughty deck, Kamasutra deck, all locations (kitchen, bathroom, car, outdoors, hotel), and all enhancements (blindfold, ice, toys, restraints, and more).</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How much does Premium cost?</div>
+                <div class="faq-answer">
+                    <p>We offer three options: Weekly ($3.99/week), Monthly ($14.99/month), or Yearly ($189/year). All plans include full access to all premium features.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel my subscription?</div>
+                <div class="faq-answer">
+                    <p>Subscriptions are managed through Google Play. Open Play Store → tap your profile → Payments & subscriptions → Subscriptions → Unlocked → Cancel subscription.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Does my partner also need Premium?</div>
+                <div class="faq-answer">
+                    <p>No! Only one partner needs Premium. When you're connected in a room, both partners can enjoy premium content as long as one has an active subscription.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Privacy & Security -->
+        <div class="faq-category">
+            <h2>🔒 Privacy & Security</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is my data private?</div>
+                <div class="faq-answer">
+                    <p>Yes! We don't require accounts, we don't store your personal information, and we don't track your intimate sessions. Your privacy is our priority.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can others see what I'm doing in the app?</div>
+                <div class="faq-answer">
+                    <p>No. Room codes are temporary and only connect you with your partner. No one else can join your session or see your activity.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I request my data be deleted?</div>
+                <div class="faq-answer">
+                    <p>Email us at shadi1menzaljy@gmail.com with your request. Since we collect minimal data, there's usually nothing to delete, but we'll confirm everything is cleared.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Troubleshooting -->
+        <div class="faq-category">
+            <h2>🔧 Troubleshooting</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">The room code isn't working</div>
+                <div class="faq-answer">
+                    <p>Make sure both partners have a stable internet connection. Room codes expire after a few minutes, so try creating a new one. Also check that you're entering the code exactly as shown (codes are case-sensitive).</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Cards aren't syncing between devices</div>
+                <div class="faq-answer">
+                    <p>This usually means a connection issue. Try: 1) Both close and reopen the app, 2) Create a new room, 3) Make sure you're both on stable WiFi or mobile data.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">The app crashed or isn't loading</div>
+                <div class="faq-answer">
+                    <p>Try force closing the app and reopening it. If the problem persists, try uninstalling and reinstalling from Google Play. Still having issues? Email us!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Box -->
+        <div class="contact-box">
+            <h2>Still Need Help?</h2>
+            <p>Can't find what you're looking for? Our team is here to help!</p>
+            <a href="mailto:shadi1menzaljy@gmail.com">Contact Support</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Unlocked. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

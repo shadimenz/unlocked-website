@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Contact Us - Unlocked App | Couples Intimacy App Support</title>
+    <meta name="description" content="Get in touch with the Unlocked app team. We're here to help with questions, feedback, or support for your couples intimacy app experience.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e94560;
+        }
+        
+        /* Main Content */
+        .contact-page {
+            min-height: 100vh;
+            padding: 120px 5% 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-container {
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .contact-header p {
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            color: #e94560;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card p {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card a {
+            color: #ffffff;
+            text-decoration: none;
+            background: linear-gradient(135deg, #e94560, #ff6b8a);
+            padding: 12px 30px;
+            border-radius: 25px;
+            display: inline-block;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .contact-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(233, 69, 96, 0.3);
+        }
+        
+        .contact-card .email-text {
+            color: #e94560;
+            font-size: 1.1rem;
+            word-break: break-all;
+        }
+        
+        /* FAQ Preview */
+        .faq-section {
+            margin-top: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 20px;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h4 {
+            color: #e94560;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item p {
+            color: #a0a0a0;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 30px 5%;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        footer p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">Unlocked</a>
+        <ul class="nav-links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#download">Download</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Content -->
+    <section class="contact-page">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1>Contact Us</h1>
+                <p>Have questions, feedback, or need support? We'd love to hear from you.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Support</h3>
+                    <p>For general inquiries, feedback, or support requests.</p>
+                    <span class="email-text">shadi1menzaljy@gmail.com</span>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🐛</div>
+                    <h3>Report a Bug</h3>
+                    <p>Found something not working? Let us know and we'll fix it.</p>
+                    <a href="mailto:shadi1menzaljy@gmail.com?subject=Bug%20Report%20-%20Unlocked%20App">Report Bug</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💡</div>
+                    <h3>Feature Request</h3>
+                    <p>Have an idea to make Unlocked better? We're all ears!</p>
+                    <a href="mailto:shadi1menzaljy@gmail.com?subject=Feature%20Request%20-%20Unlocked%20App">Suggest Feature</a>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h4>How do I connect with my partner?</h4>
+                    <p>One partner creates a room and gets a 6-digit code. The other partner enters this code to join. Both devices will be synchronized.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Is my data private?</h4>
+                    <p>Yes! We don't require accounts or store personal information. Your intimate moments stay between you and your partner.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How do I cancel my subscription?</h4>
+                    <p>Subscriptions are managed through Google Play. Go to Play Store → Menu → Subscriptions → Unlocked → Cancel.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I request my data be deleted?</h4>
+                    <p>Yes! Email us at shadi1menzaljy@gmail.com with your request and we'll handle it promptly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Unlocked. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p>
+    </footer>
+
+</body>
+</html>
