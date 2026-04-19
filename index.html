@@ -379,7 +379,6 @@
 
         .faq-item {
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 24px 0;
         }
 
         .faq-item:last-child {
@@ -387,16 +386,46 @@
         }
 
         .faq-question {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: #ffffff;
-            margin-bottom: 10px;
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            color: #e94560;
+        }
+
+        .faq-chevron {
+            font-size: 0.8rem;
+            color: #e94560;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-chevron {
+            transform: rotate(180deg);
         }
 
         .faq-answer {
             color: #a0a0a0;
-            line-height: 1.7;
+            line-height: 1.8;
             font-size: 0.95rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            padding-bottom: 0;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding-bottom: 20px;
         }
 
         /* Footer */
@@ -644,46 +673,68 @@
             <h2 class="section-title">Frequently Asked Questions</h2>
 
             <div class="faq-item">
-                <div class="faq-question">What is Unlocked?</div>
-                <div class="faq-answer">Unlocked is an intimacy card game app for couples. It generates guided card experiences across different moods — Sweet, Flirty, Hot, Naughty, and Kamasutra — customized to your location, preferences, and orientation.</div>
+                <div class="faq-question">What is Unlocked — the couples card game app? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Unlocked is an intimacy card game app designed for couples. It generates guided, AI-powered card experiences across five moods — Sweet, Flirty, Hot, Naughty, and Kamasutra — customized to your location, enhancements, and sexual orientation. Think of it as a date night game that fits in your pocket.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">How does Long Distance mode work?</div>
-                <div class="faq-answer">One partner creates a session and receives a 6-character code. The other partner enters it on their device. Both phones display the same cards in real time — one partner controls the pace, the other follows. It's a virtual date experience designed specifically for long distance couples.</div>
+                <div class="faq-question">How is Unlocked different from other couples games? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Unlike static card decks or generic couples quizzes, Unlocked generates unique card combinations every session using your location, preferences, and enhancements. No two nights are ever the same. It also includes Long Distance mode — a first-of-its-kind feature that lets couples play the same deck in real time from different cities.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Is Unlocked free?</div>
-                <div class="faq-answer">Sweet and Flirty decks are completely free. Hot, Naughty, and Long Distance each include one free session so you can try before subscribing. A premium subscription unlocks unlimited access to all decks and features.</div>
+                <div class="faq-question">What decks are available in the couples card game? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Unlocked has five decks: Sweet (romantic & tender), Flirty (playful & teasing), Hot (sensual & explicit), Naughty (daring & adventurous), and Kamasutra (position-guided intimacy). Sweet and Flirty are free. Hot, Naughty, and Kamasutra require a premium subscription — with one free session to try each.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Is it available for gay and lesbian couples?</div>
-                <div class="faq-answer">Yes. All decks — including Long Distance — support straight, gay, and lesbian orientations. The content is tailored to each couple's dynamic, including anatomy-appropriate and pronoun-appropriate cards.</div>
+                <div class="faq-question">Is Unlocked a good date night app for couples at home? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Absolutely. Unlocked is built for date nights at home. Pick a room — bedroom, living room, kitchen, bathroom — and the app tailors every card to your setting. Add enhancements like massage oil, restraints, or ice and the deck adapts to what you have available.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Do both partners need to download the app for Long Distance?</div>
-                <div class="faq-answer">Yes. Both partners need the Unlocked app installed. One creates the session, shares the 6-character code, and the other joins. The deck syncs in real time across both devices.</div>
+                <div class="faq-question">How does Long Distance mode work for couples? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">One partner creates a session and gets a 6-character code. The other enters it on their phone. Both devices show the same card simultaneously — one partner controls the pace, the other follows in real time. It's designed as a virtual date experience for long distance relationships, with cards written for two people playing from different locations.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Is my data private?</div>
-                <div class="faq-answer">Yes. Long Distance sessions are temporary, code-protected, and automatically deleted after 24 hours. No personal data is stored. Your intimate moments stay between you and your partner.</div>
+                <div class="faq-question">What are the best virtual date ideas for long distance couples? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Unlocked's Long Distance mode is one of the best virtual date ideas for long distance couples. You pick a virtual location — bedroom, hotel, sofa, or shower — and the app creates a shared scene for both of you. Cards escalate from tease to foreplay to climax, giving you a complete experience together even when you're apart.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">What are some virtual date ideas for long distance couples?</div>
-                <div class="faq-answer">Unlocked's Long Distance mode turns any night into a virtual date. Pick a virtual location — bedroom, hotel room, sofa, or shower — and the app sets the scene for both of you through guided cards that escalate from tease to afterglow.</div>
+                <div class="faq-question">Is Unlocked available for gay and lesbian couples? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Yes. All decks — including Long Distance — fully support straight, gay, and lesbian couples. Cards use orientation-appropriate language, pronouns, and anatomy. Every relationship deserves intimacy tailored to them.</div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Is Unlocked available on iOS?</div>
-                <div class="faq-answer">Android is available now on Google Play. iOS is coming soon — join the waitlist to be notified when it launches.</div>
+                <div class="faq-question">Is the app free? What does premium include? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Sweet and Flirty decks are completely free with no account needed. Hot, Naughty, and Long Distance each include one free session. Premium unlocks unlimited access to all decks, all locations, and all enhancements — available as weekly, monthly, or yearly subscriptions.</div>
             </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my data private and secure? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Yes. No account is required to play. Long Distance sessions are temporary and automatically deleted after 24 hours. No personal data or session content is stored on our servers. Your intimate moments stay between you and your partner.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is Unlocked available on iPhone (iOS)? <span class="faq-chevron">▼</span></div>
+                <div class="faq-answer">Unlocked is currently available on Android via Google Play. The iOS version for iPhone is coming soon. Follow us or check back here to be notified when it launches on the App Store.</div>
+            </div>
+
         </div>
     </section>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
 
     <!-- Download Section -->
     <section class="download" id="download">
